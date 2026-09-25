@@ -9,7 +9,8 @@
     "aggregate_id",
     "occurred_at",
     "version",
-    "summary"
+    "summary",
+    "payload"
   ],
   "properties": {
     "event_id": {
@@ -20,10 +21,18 @@
       "type": "string",
       "enum": [
         "CLAIM_SUBMITTED",
+        "CLAIM_REVISED",
+        "DESIGN_VERSION_PROPOSED",
         "DESIGN_REVIEWED",
         "MATERIAL_TESTED",
+        "COMPONENT_STATUS_CHANGED",
+        "COMPONENT_FABRICATED",
+        "COMPONENT_DISPOSITION_RECORDED",
         "INSTALLATION_CLEARED",
-        "LABEL_RELEASED"
+        "LABEL_RELEASED",
+        "LABEL_CORRECTED",
+        "WORK_ITEM_RAISED",
+        "WORK_ITEM_COMPLETED"
       ]
     },
     "aggregate_type": {
@@ -31,8 +40,11 @@
       "enum": [
         "historical_claim",
         "design_version",
+        "component",
         "fabrication_batch",
-        "installation_release"
+        "installation_release",
+        "plaque_label",
+        "work_item"
       ]
     },
     "aggregate_id": {
@@ -50,7 +62,10 @@
     "summary": {
       "type": "string",
       "minLength": 1
+    },
+    "payload": {
+      "type": "object"
     }
   },
-  "additionalProperties": true
+  "additionalProperties": false
 }
