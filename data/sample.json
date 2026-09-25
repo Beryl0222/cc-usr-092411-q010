@@ -2,8 +2,20 @@
   "event_id": "092108-011-sample-001",
   "event_type": "CLAIM_SUBMITTED",
   "aggregate_type": "historical_claim",
-  "aggregate_id": "memorial_sculpture_review-001",
+  "aggregate_id": "claim-sample-001",
   "occurred_at": "2026-09-20T18:00:00+08:00",
   "version": 1,
-  "summary": "登记主题雕塑创作会审的首条领域记录"
+  "summary": "登记首条史实主张：人物甲所着官服为元丰五年制式",
+  "payload": {
+    "claim_id": "claim-sample-001",
+    "subject": "人物甲服饰年代",
+    "summary": "人物甲所着官服为元丰五年制式",
+    "evidence_ref": "archive://costume/fig-jia",
+    "evidence_version": "ev-2026-09-18",
+    "certainty": "confirmed",
+    "citation_scope": "label"
+  },
+  "causation_id": null,
+  "request_id": null,
+  "request_hash": null
 }

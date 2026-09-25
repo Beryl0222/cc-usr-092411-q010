@@ -9,7 +9,8 @@
     "aggregate_id",
     "occurred_at",
     "version",
-    "summary"
+    "summary",
+    "payload"
   ],
   "properties": {
     "event_id": {
@@ -20,10 +21,19 @@
       "type": "string",
       "enum": [
         "CLAIM_SUBMITTED",
-        "DESIGN_REVIEWED",
+        "CLAIM_REVISED",
+        "DESIGN_VERSION_PUBLISHED",
+        "DESIGN_SIGNED",
         "MATERIAL_TESTED",
+        "COMPONENT_FABRICATED",
+        "COMPONENT_HELD",
+        "IMPACT_ASSESSED",
+        "COMPONENT_DISPOSITIONED",
         "INSTALLATION_CLEARED",
-        "LABEL_RELEASED"
+        "COMPONENT_INSTALLED",
+        "INSTALLATION_CORRECTED",
+        "LABEL_RELEASED",
+        "LABEL_CORRECTED"
       ]
     },
     "aggregate_type": {
@@ -32,7 +42,9 @@
         "historical_claim",
         "design_version",
         "fabrication_batch",
-        "installation_release"
+        "installation_release",
+        "label",
+        "component"
       ]
     },
     "aggregate_id": {
@@ -50,7 +62,19 @@
     "summary": {
       "type": "string",
       "minLength": 1
+    },
+    "payload": {
+      "type": "object"
+    },
+    "causation_id": {
+      "type": ["string", "null"]
+    },
+    "request_id": {
+      "type": ["string", "null"]
+    },
+    "request_hash": {
+      "type": ["string", "null"]
     }
   },
-  "additionalProperties": true
+  "additionalProperties": false
 }
